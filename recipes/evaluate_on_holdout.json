@@ -1,0 +1,69 @@
+{
+  "name": "evaluate_on_holdout",
+  "projectKey": "CCCODERHANDSON",
+  "type": "evaluation",
+  "neverRecomputeExistingPartitions": false,
+  "params": {
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "hashPropagationBehavior": "INHERIT",
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "holdout",
+          "deps": []
+        }
+      ]
+    },
+    "model": {
+      "items": [
+        {
+          "ref": "Q8dmNBgJ",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "evaluationStore": {
+      "items": [
+        {
+          "ref": "EfVC0Mxw",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tfreckmann"
+    },
+    "lastModifiedOn": 1669829925212,
+    "extendedProperties": {}
+  },
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "tfreckmann"
+    },
+    "lastModifiedOn": 1694118894496,
+    "extendedProperties": {}
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

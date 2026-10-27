@@ -1,0 +1,218 @@
+{
+  "type": "ExperimentsDB",
+  "managed": false,
+  "featureGroup": false,
+  "name": "project_experiment_tracking_data",
+  "projectKey": "CCCODERHANDSON",
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT",
+    "ignoreErrorStatusOnBuild": false
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "cchuljian"
+    },
+    "lastModifiedOn": 1761862738053
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tfreckmann"
+    },
+    "lastModifiedOn": 1700074621607,
+    "extendedProperties": {}
+  },
+  "tags": [],
+  "params": {
+    "format": "LONG",
+    "scope": "PROJECT",
+    "experimentIds": [],
+    "viewType": "ACTIVE_ONLY",
+    "orderBy": []
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "run_project_key",
+        "type": "string"
+      },
+      {
+        "name": "run_exp_id",
+        "type": "string"
+      },
+      {
+        "name": "run_uuid",
+        "type": "string"
+      },
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "run_start_time",
+        "type": "bigint"
+      },
+      {
+        "name": "run_end_time",
+        "type": "bigint"
+      },
+      {
+        "name": "run_status",
+        "type": "string"
+      },
+      {
+        "name": "run_user_id",
+        "type": "string"
+      },
+      {
+        "name": "run_artifact_uri",
+        "type": "string"
+      },
+      {
+        "name": "run_lifecycle_stage",
+        "type": "string"
+      },
+      {
+        "name": "metric_key",
+        "type": "string"
+      },
+      {
+        "name": "metric_value",
+        "type": "double"
+      },
+      {
+        "name": "metric_step",
+        "type": "int"
+      },
+      {
+        "name": "metric_timestamp",
+        "type": "int"
+      },
+      {
+        "name": "param_key",
+        "type": "string"
+      },
+      {
+        "name": "param_value",
+        "type": "string"
+      },
+      {
+        "name": "tag_key",
+        "type": "string"
+      },
+      {
+        "name": "tag_value",
+        "type": "string"
+      }
+    ],
+    "userModified": true
+  },
+  "typeSystemVersion": "V1",
+  "dkuProperties": [],
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "ascending": true,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "monitor": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {
+    "gdpr_contains_personal_data": "UNSURE"
+  }
+}

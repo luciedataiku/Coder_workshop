@@ -1,0 +1,68 @@
+{
+  "name": "recipe_from_notebook_Custom_Modeling",
+  "projectKey": "CCCODERHANDSON",
+  "type": "python",
+  "neverRecomputeExistingPartitions": false,
+  "params": {
+    "envSelection": {
+      "envMode": "INHERIT"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    },
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "hashPropagationBehavior": "INHERIT",
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "train",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "TjDsem0B",
+          "appendMode": false
+        },
+        {
+          "ref": "Q8dmNBgJ",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tfreckmann"
+    },
+    "lastModifiedOn": 1669829707954,
+    "extendedProperties": {}
+  },
+  "versionTag": {
+    "versionNumber": 63,
+    "lastModifiedBy": {
+      "login": "lluneau"
+    },
+    "lastModifiedOn": 1793128877567
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

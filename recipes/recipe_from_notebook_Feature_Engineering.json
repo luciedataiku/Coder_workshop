@@ -1,0 +1,72 @@
+{
+  "name": "recipe_from_notebook_Feature_Engineering",
+  "projectKey": "CCCODERHANDSON",
+  "type": "python",
+  "neverRecomputeExistingPartitions": false,
+  "params": {
+    "envSelection": {
+      "envMode": "USE_BUILTIN_MODE"
+    },
+    "containerSelection": {
+      "containerMode": "NONE",
+      "containerConf": "eks-default"
+    },
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "hashPropagationBehavior": "INHERIT",
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "customers_web_joined",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "customers_binned",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tfreckmann"
+    },
+    "lastModifiedOn": 1669828788346,
+    "extendedProperties": {}
+  },
+  "versionTag": {
+    "versionNumber": 49,
+    "lastModifiedBy": {
+      "login": "lluneau"
+    },
+    "lastModifiedOn": 1793127992651
+  },
+  "cobuildTags": {
+    "createdByCobuild": false,
+    "lastEditTimestamp": 1793127992651,
+    "conversationId": "453889c2-f9d4-4ed0-82a2-f27dd385e226",
+    "runId": "2026-10-27T19:05:15.902Z-207d6191-78e5-4d32-b4e6-66cc22e0a2b3",
+    "lastEditVersionNumber": 49
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

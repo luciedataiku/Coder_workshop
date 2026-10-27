@@ -1,0 +1,227 @@
+{
+  "type": "Snowflake",
+  "managed": true,
+  "featureGroup": false,
+  "name": "customers_binned",
+  "projectKey": "CCCODERHANDSON",
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT",
+    "ignoreErrorStatusOnBuild": false
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "lluneau"
+    },
+    "lastModifiedOn": 1793128012085
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tfreckmann"
+    },
+    "lastModifiedOn": 1669828785203
+  },
+  "tags": [],
+  "params": {
+    "connection": "SEDemo",
+    "notReadyIfEmpty": false,
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "catalog": "SEDEMO",
+    "table": "${projectKey}_CUSTOMERS_BINNED",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeDescriptionsAsSQLComment": false,
+    "noDropOnSchemaMismatch": false,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "datetimenotzReadMode": "AS_STRING",
+    "dateonlyReadMode": "AS_DATE",
+    "variablesExpansionLoopConfig": {
+      "enabled": false,
+      "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
+      "replacements": []
+    },
+    "sparkJdbcAccess": "NONE",
+    "numPartitions": -1
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "customer_id",
+        "type": "string",
+        "maxLength": 16777216
+      },
+      {
+        "name": "age",
+        "type": "bigint"
+      },
+      {
+        "name": "price_first_item_purchased",
+        "type": "double"
+      },
+      {
+        "name": "gender",
+        "type": "string",
+        "maxLength": 16777216
+      },
+      {
+        "name": "ip",
+        "type": "string",
+        "maxLength": 16777216
+      },
+      {
+        "name": "ip_geopoint",
+        "type": "string",
+        "maxLength": 16777216
+      },
+      {
+        "name": "ip_country_code",
+        "type": "string",
+        "maxLength": 16777216
+      },
+      {
+        "name": "pages_visited",
+        "type": "bigint"
+      },
+      {
+        "name": "campaign",
+        "type": "bigint"
+      },
+      {
+        "name": "high_value",
+        "type": "double"
+      }
+    ],
+    "userModified": false
+  },
+  "typeSystemVersion": "V1",
+  "dkuProperties": [],
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "ascending": true,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "monitor": true,
+    "checks": [
+      {
+        "type": "DriftColumnMinRule",
+        "columns": [
+          "price_first_item_purchased"
+        ],
+        "driftParams": {
+          "periodUnit": "DAYS",
+          "learningPeriod": 4,
+          "lookbackPeriod": 7,
+          "iqrFactor": 1.5,
+          "softIqrFactor": 1.25,
+          "iqrFactorEnabled": true,
+          "softIqrFactorEnabled": false
+        },
+        "id": "el9WxFzg",
+        "displayName": "Min of price_first_item_purchased is within its typical range",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": true,
+        "enabled": true
+      }
+    ],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {
+    "gdpr_contains_personal_data": "UNSURE"
+  }
+}

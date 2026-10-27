@@ -1,0 +1,130 @@
+{
+  "name": "compute_Wd8kz5fC",
+  "projectKey": "CCCODERHANDSON",
+  "type": "export",
+  "neverRecomputeExistingPartitions": false,
+  "params": {
+    "clearOutputPartition": false,
+    "exportParams": {
+      "destinationType": "DOWNLOAD",
+      "temporaryFileBehavior": "AUTO",
+      "format": {
+        "type": "csv",
+        "params": {
+          "style": "excel",
+          "charset": "utf8",
+          "separator": "\t",
+          "quoteChar": "\"",
+          "escapeChar": "\\",
+          "dateSerializationFormat": "ISO",
+          "arrayMapFormat": "json",
+          "hiveSeparators": [
+            "\u0002",
+            "\u0003",
+            "\u0004",
+            "\u0005",
+            "\u0006",
+            "\u0007",
+            "\b"
+          ],
+          "skipRowsBeforeHeader": 0,
+          "parseHeaderRow": false,
+          "skipRowsAfterHeader": 0,
+          "probableNumberOfRecords": 0,
+          "normalizeBooleans": false,
+          "normalizeDoubles": true,
+          "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+          "readMissingColumnsBehavior": "DISCARD_SILENT",
+          "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+          "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+          "fileReadFailureBehavior": "FAIL",
+          "compress": ""
+        }
+      },
+      "overwriteDestinationDataset": false,
+      "applyExplorationFilters": false,
+      "applyColoring": false,
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      }
+    },
+    "filter": {
+      "distinct": false,
+      "enabled": false
+    },
+    "variablesExpansionLoopConfig": {
+      "enabled": false,
+      "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
+      "replacements": []
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "hashPropagationBehavior": "INHERIT",
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "unlabeled_scored_autoML",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Wd8kz5fC",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tfreckmann"
+    },
+    "lastModifiedOn": 1700606580826,
+    "extendedProperties": {}
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tfreckmann"
+    },
+    "lastModifiedOn": 1700606580826,
+    "extendedProperties": {}
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
